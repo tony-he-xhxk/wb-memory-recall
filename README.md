@@ -13,11 +13,11 @@ WorkBuddy 每轮注入的长期记忆是**截断版**，而「踩坑」条目常
 
 ## 快速安装
 
-1. **从 Releases 页面下载技能 ZIP。** 解压到本地，并通过 WorkBuddy 的图形化界面，选择左侧栏“专家·技能·连接器”下的“技能”，右上角“添加技能”，选择“上传技能”，界面如下所示：
+1. **从 [Releases 页面](https://github.com/tony-he-xhxk/wb-memory-recall/releases) 下载技能 ZIP。** 解压到本地，并通过 WorkBuddy 的图形化界面，选择左侧栏“专家·技能·连接器”下的“技能”，右上角“添加技能”，选择“上传技能”，界面如下所示：
 
 ![](assets/readme-img-1.png)
 
-**点击底部的“选择 ZIP 文件”**，浏览到从 Releases 页面下载的 ZIP，WorkBuddy 会自动审核本技能的安全性，手动点击“继续安装”以安装本技能。
+**点击底部的“选择 ZIP 文件”**，浏览到从 [Releases 页面](https://github.com/tony-he-xhxk/wb-memory-recall/releases) 下载的 ZIP，WorkBuddy 会自动审核本技能的安全性，手动点击“继续安装”以安装本技能。
 
 2. **注册会话启动钩子。** 直接让WorkBuddy按照 [给WorkBuddy看的README文件](memory-recall/README.md) 编辑 `~/.workbuddy/settings.json`，加入 `hooks`（已有就合并）。
 
