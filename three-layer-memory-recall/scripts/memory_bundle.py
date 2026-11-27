@@ -426,7 +426,7 @@ def fit_body(body, cap=PER_SECTION_CAP):
     b = body.encode("utf-8")
     if len(b) <= cap:
         return body
-    return b[:cap].decode("utf-8", "ignore") + "\n…[本节已截断, 全文用 /memory-recall]"
+    return b[:cap].decode("utf-8", "ignore") + "\n…[本节已截断, 全文用 /three-layer-memory-recall]"
 
 
 def pick_sections(text, budget):
@@ -489,7 +489,7 @@ def build_digest(root, days, max_bytes):
     out.append("[REMINDER] [GOTCHA] 只能从下面的记忆正文里取, 不能从技能 SKILL.md 的规则里取。")
     out.append("")
     out.append("这是【精简版】, 不是全部记忆。上文若省略了章节, 且本次任务涉及它们, 或即将改动")
-    out.append("用户的文件/配置/文档, 必须先跑 /memory-recall 读全文(分 3 片)。禁止仅凭本摘要")
+    out.append("用户的文件/配置/文档, 必须先跑 /three-layer-memory-recall 读全文(分 3 片)。禁止仅凭本摘要")
     out.append("断言\"记忆里没写过\"。")
     if omitted:
         tail = "、".join(t[:18] for t in omitted[:12]) + ("…" if len(omitted) > 12 else "")
@@ -501,7 +501,7 @@ def build_digest(root, days, max_bytes):
         out.append(body)
         out.append("")
     if omitted:
-        out.append("[省略 %d 节] 需要时用 /memory-recall 读全文" % len(omitted))
+        out.append("[省略 %d 节] 需要时用 /three-layer-memory-recall 读全文" % len(omitted))
         out.append("")
 
     l2 = manifest["layer2"]
@@ -525,7 +525,7 @@ def build_digest(root, days, max_bytes):
             out.append(wrap_long_lines(text3, 1200))
         else:
             out.append(wrap_long_lines(text3[: l3_cap // 3], 1200))
-            out.append("[日报超预算, 已截断, 完整内容用 /memory-recall]")
+            out.append("[日报超预算, 已截断, 完整内容用 /three-layer-memory-recall]")
         out.append("")
 
     out.append("<<<END DIGEST>>>")

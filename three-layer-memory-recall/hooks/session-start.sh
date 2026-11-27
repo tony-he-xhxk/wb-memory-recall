@@ -1,5 +1,5 @@
 #!/bin/sh
-# memory-recall · SessionStart hook
+# three-layer-memory-recall · SessionStart hook
 # 作用: 新会话/恢复会话时, 把长期记忆的"精简版"自动注入上下文。
 # 注意: 本脚本的 stdout 会被追加进对话上下文, 所以只允许输出 digest(≤18KB)。
 #       诊断信息一律写 hook.log, 不要串到 stdout。
@@ -66,7 +66,7 @@ printf '%s\n' "--- $(date '+%Y-%m-%d %H:%M:%S') rc=$rc bytes=$NBYTES root=$ROOT_
 #    rc!=0 才算失败; rc==0 且无输出 = 这台机器还没有任何记忆文件, 属正常情况, 静默退出
 if [ "$rc" -ne 0 ]; then
   printf '%s\n' "<<<AUTO-MEMORY-DIGEST | 注入失败>>>"
-  printf '%s\n' "长期记忆自动注入失败(rc=$rc)。本次会话开始前, 请先手动执行技能 memory-recall 读取三层记忆。"
+  printf '%s\n' "长期记忆自动注入失败(rc=$rc)。本次会话开始前, 请先手动执行技能 three-layer-memory-recall 读取三层记忆。"
   printf '%s\n' "诊断日志: ${LOG#"$HOME_DIR"}"
   exit 0
 fi
