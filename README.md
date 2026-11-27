@@ -1,8 +1,8 @@
-# three-layer-memory-recall
+# three-layer-memory-recall · WorkBuddy三层记忆召回技能
 
 给 WorkBuddy 用的技能：把**三层长期记忆**（用户级 `MEMORY.md` / 项目级 `MEMORY.md` / 最近几日日报）在**会话开头自动灌进上下文**，需要时再读全文，也可以按你的要求追加、修正、删除记忆条目。
 
-> 仓库名沿用 `wb-memory-recall`；技能的市场名称是 `three-layer-memory-recall`（原名 `memory-recall` 已被占用）。当前版本 **v1.3.1**。
+> 技能的市场名称是 `three-layer-memory-recall`。当前版本 **v1.3.1**。
 
 ## 它解决什么
 
@@ -16,25 +16,19 @@ WorkBuddy 每轮注入的长期记忆是**截断版**，而「踩坑」条目常
 
 ## 安装
 
-### 方式一：从技能市场安装（推荐）
+两种方式，任选其一。
+
+### 方式一：从技能市场安装
 
 WorkBuddy 左侧栏「专家·技能·连接器」→「技能」，搜索 **长期记忆召回** 或 `three-layer-memory-recall`，点加号安装。
 
-装完按下面「注册会话启动钩子」继续。
+### 方式二：从 Releases 页面下载 ZIP 安装
 
-### 方式二：本地安装
-
-**A. 直接放目录** —— 把本仓库里的 `three-layer-memory-recall/` 整个文件夹复制到用户级技能目录（Windows / macOS / Linux 都一样）：
-
-```bash
-cp -r three-layer-memory-recall ~/.workbuddy/skills/
-```
-
-**B. 上传 ZIP** —— 把 `three-layer-memory-recall/` 压缩成 ZIP（注意：ZIP 里第一层必须直接是 `SKILL.md`，不要再套一层目录），然后在 WorkBuddy 左侧栏「专家·技能·连接器」→「技能」→ 右上角「添加技能」→「上传技能」：
+1. **从 [Releases 页面](https://github.com/tony-he-xhxk/wb-memory-recall/releases) 下载技能 ZIP。** 解压到本地，并通过 WorkBuddy 的图形化界面，选择左侧栏“专家·技能·连接器”下的“技能”，右上角“添加技能”，选择“上传技能”，界面如下所示：
 
 ![](assets/readme-img-1.png)
 
-点击底部的「选择 ZIP 文件」，选中刚才的 ZIP，WorkBuddy 会自动审核本技能的安全性，手动点「继续安装」完成安装。
+**点击底部的“选择 ZIP 文件”**，浏览到从 [Releases 页面](https://github.com/tony-he-xhxk/wb-memory-recall/releases) 下载的 ZIP，WorkBuddy 会自动审核本技能的安全性，手动点击“继续安装”以安装本技能。
 
 ## 注册会话启动钩子（可选）
 
