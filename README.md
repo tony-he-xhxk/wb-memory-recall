@@ -18,11 +18,11 @@ WorkBuddy 每轮注入的长期记忆是**截断版**，而「踩坑」条目常
 
 **方式一：从技能市场安装。** WorkBuddy 左侧栏「专家·技能·连接器」→「技能」，搜索 **长期记忆召回** 或 `three-layer-memory-recall`，点加号安装。搜索匹配界面如下图所示：
 
-![[readme-img-0.png]]
+![](assets/readme-img-0.png)
 
 单击技能详情，如下图：
 
-![[readme-img-2.png]]
+![](assets/readme-img-2.png)
 
 在此界面，单击“安装”按钮即可。
 
